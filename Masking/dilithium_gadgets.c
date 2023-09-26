@@ -234,7 +234,7 @@ void gen_y(uint32_t* y, int n){
 
   for(int i=0; i < n; ++i) x[i] = rand32()%(1<<MU);
   impconvBA64(arith_x, x, n);
-  for(int i=0; i < n; ++i) arith_x[i] %= (1<<k);
+  for(int i=0; i < n; ++i) arith_x[i] %= (1LLU<<k);
 
 
   exact_modulus_switching(arith_x, y, n);
